@@ -24,7 +24,7 @@ Future<Weather> fetchWeather(String city) async {
     '/data/2.5/weather',
     {
       'q': city,
-      'appid': env['OPENWEATHER_TOKEN'],
+      'appid': env['OPEN_WEATHER_TOKEN'],
       'units': 'metric',
     },
   ));
