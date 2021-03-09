@@ -17,5 +17,5 @@ bool isEvening(DateTime date) {
 
 bool isNight(DateTime date) {
   final int hour = date.hour;
-  return hour >= 22 && hour < 6;
+  return hour >= 22 || hour < 6;
 }
