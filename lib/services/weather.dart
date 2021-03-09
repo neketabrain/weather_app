@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class Weather {
@@ -24,7 +24,7 @@ Future<Weather> fetchWeather(String city) async {
     '/data/2.5/weather',
     {
       'q': city,
-      'appid': '1a90acb51c0db54462a1e2dcfed39be8',
+      'appid': env['OPENWEATHER_TOKEN'],
       'units': 'metric',
     },
   ));
